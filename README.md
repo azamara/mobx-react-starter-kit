@@ -1,4 +1,5 @@
-# Brunch with React Mobx Starter Kit
+# MobX React Starter Kit
+ - Brunch
  - ES6
  - React
  - React Router
