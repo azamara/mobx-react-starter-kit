@@ -1,11 +1,7 @@
-# MobX React Starter Kit
- - Brunch
- - ES6
- - React
- - React Router
- - Apollo Client for GraphQL
- - MobX
- - MobX Dev Tools
- - Bootstrap
- - FontAwesome
- - jQuery
+#### WEB
+
+	http://localhost:3000
+
+#### BFF
+
+	http://localhost:8000

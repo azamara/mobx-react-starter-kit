@@ -1,0 +1,17 @@
+version: '2'
+services:
+  web:
+    image: hasanozgan/node-runner
+    ports:
+     - "3000:3000"
+     - "9485:9485"
+    volumes:
+     - ./web:/src
+    depends_on:
+     - bff
+  bff:
+    image: hasanozgan/node-runner
+    ports:
+     - "8000:8000"
+    volumes:
+     - ./bff:/src

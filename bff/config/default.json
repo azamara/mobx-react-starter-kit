@@ -1,0 +1,7 @@
+{
+  "graphiql": true,
+  "authentication": false,
+  "passwordKey": "Z22B2QdnQRs1h24sTGLS42WnU2wORj66K8jPB60KZtWaXGNEgfLdc",
+  "jwtSecretKey":	"DvJqzC9J3OTNTzokLc59CEd0Y12NmVKg6RO610Lfw8OjV6zT31Oe4",
+  "sessionSecretKey":	"ORNCrzpIZsh9P6hqPgS16mpkR319zQwIRKH4229JNIMoOuVaTAlXD"
+}

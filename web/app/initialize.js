@@ -10,7 +10,7 @@ import makeClient from 'libs/apollo';
 
 const store = new ClickStore();
 const routes = makeRoutes(store);
-const client = makeClient('https://www.graphqlhub.com/graphql');
+const client = makeClient('http://localhost:8000/graphql');
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
