@@ -533,35 +533,59 @@ var Home = (_dec = (0, _mobxReact.observer)(['store']), _dec2 = (0, _reactApollo
   _createClass(Home, [{
     key: 'render',
     value: function render() {
+      var _props$data = this.props.data;
+      var loading = _props$data.loading;
+      var errors = _props$data.errors;
+      var testString = _props$data.testString;
       var _props$store = this.props.store;
       var name = _props$store.name;
       var description = _props$store.description;
 
 
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'h2',
-          null,
-          'Welcome to the ',
-          name,
-          ' project.'
-        ),
-        _react2.default.createElement(
+      if (loading) {
+        return _react2.default.createElement(
           'h3',
           null,
-          'This project is ',
-          description,
-          '.'
-        ),
-        _react2.default.createElement(
-          'h4',
+          'Loading...'
+        );
+      } else if (errors) {
+        return _react2.default.createElement(
+          'ul',
           null,
-          this.props.data.testString
-        ),
-        _react2.default.createElement(_MyComponent2.default, { store: this.props.store })
-      );
+          errors.map(function (error) {
+            _react2.default.createElement(
+              'li',
+              null,
+              error
+            );
+          })
+        );
+      } else {
+        return _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Welcome to the ',
+            name,
+            ' project.'
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            'This project is ',
+            description,
+            '.'
+          ),
+          _react2.default.createElement(
+            'h4',
+            null,
+            testString
+          ),
+          _react2.default.createElement(_MyComponent2.default, { store: this.props.store })
+        );
+      }
     }
   }]);
 

@@ -12,15 +12,28 @@ import gql from 'graphql-tag';
 `)
 export default class Home extends React.Component {
   render() {
+    const { loading, errors, testString } = this.props.data;
     const { name, description } = this.props.store;
 
-    return (
-      <div>
-        <h2>Welcome to the {name} project.</h2>
-        <h3>This project is {description}.</h3>
-        <h4>{this.props.data.testString}</h4>
-        <MyComponent store={this.props.store} />
-      </div>
-    );
+    if (loading) {
+      return (<h3>Loading...</h3>);
+    } else if (errors) {
+      return (
+        <ul>
+          {errors.map(error => {
+            <li>{error}</li>;
+          })}
+        </ul>
+      );
+    } else {
+      return (
+        <div>
+          <h2>Welcome to the {name} project.</h2>
+          <h3>This project is {description}.</h3>
+          <h4>{testString}</h4>
+          <MyComponent store={this.props.store} />
+        </div>
+      );
+    }
   }
 }
